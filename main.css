@@ -42,7 +42,6 @@ a {
 
 header {
     width: 90%;
-    /*height: 40px;*/
     display: grid;
     grid-template-columns: max-content auto 30%;
     align-items: center;
@@ -54,13 +53,15 @@ header {
 
 header .nav {
     width: 90%;
+    height: 40px;
     display: flex;
     justify-content: space-around;
+    white-space: nowrap;
 }
 
 header .nav a {
     box-sizing: border-box;
-    padding: 1% 3%;
+    padding: 10px 30px;
 }
 
 header .nav a:hover {
@@ -135,7 +136,8 @@ header .social img:hover {
 .collection777 {
     margin: 10% 0;
     display: grid;
-    grid-template-columns: 40% 60%;
+    grid-template-columns: 40% 55%;
+    grid-column-gap: 5%;
     align-items: stretch;
 }
 
@@ -151,6 +153,10 @@ header .social img:hover {
 
 .collection777 .left-container h2 span {
     color: #A8A8A8;
+}
+
+.collection777 .left-container img {
+    width: 100%;
 }
 
 .collection777 .right-container .p1 {
@@ -206,9 +212,8 @@ header .social img:hover {
     animation: text 10s infinite linear;
     padding-left: 20%;
     white-space: nowrap;
-
-
 }
+
 @keyframes text {
     0%{
         transform: translate(0, 0);
@@ -221,12 +226,13 @@ header .social img:hover {
 
 .artists .art {
     width: 80%;
+    height: 110vh;
     margin: auto;
     display: grid;
     grid-template-columns: 30% 30% 30%;
     grid-column-gap: 5%;
-    grid-template-rows: 350px 350px;
-    grid-row-gap: 5%;
+    grid-template-rows: 48% 48% ;
+    grid-row-gap: 4%;
 }
 
 .artists .art .cont-foto {
@@ -242,7 +248,6 @@ header .social img:hover {
 
 .artists .art img:hover {
     scale: 1.2;
-
 }
 
 .artists .art div {
@@ -257,7 +262,7 @@ header .social img:hover {
     text-shadow: 1px 1px #000000;
     position: relative;
     top: -80px;
-    left: 0%;
+    /*left: 0;*/
     display: none;
     background: rgba(146, 150, 140, 0.4);
 }
@@ -337,10 +342,10 @@ header .social img:hover {
 
 .banner {
     margin: 10% 0 0 0;
+}
+
+.banner img {
     width: 100%;
-    height: 240px;
-    background-image: url("Image/banner.png");
-    background-size: cover;
 }
 
            /*ROADMAP*/
@@ -350,20 +355,21 @@ header .social img:hover {
     grid-template-columns: 40%;
     justify-content: center;
     grid-template-rows: auto auto auto auto auto;
-    background-image: url("Image/circle.svg"), url("Image/circle.svg"), url("Image/circle.svg");
-    background-repeat: no-repeat;
-    background-position: top left, center right, bottom left;
     padding: 10% 0 10% 0;
+    position: relative;
+    overflow: hidden;
 }
 
 .roadmap h2 {
     text-align: center;
     font-family: Audiowide_Regular;
     font-size: 38px;
+    z-index: 1;
 }
 
 .roadmap .card {
     background: #222222;
+    z-index: 1;
 }
 
 .roadmap .card .header-card {
@@ -441,8 +447,199 @@ header .social img:hover {
     width: 100%;
 }
 
-.roadmap .card .main-card img:hover {
-    scale: 2;
+                  /*CIRCLES*/
+
+.circles1 {
+    width: 600px;
+    height: 600px;
+    position: absolute;
+}
+
+.circles1 .one {
+    max-width: 100%;
+    height: 100%;
+    border: 1px solid rgba(141, 253, 27, 0.5);
+    border-radius: 50%;
+    animation: newAnim 10s alternate infinite;
+}
+.circles1 .two {
+    width: 70%;
+    height: 70%;
+    border: 1px solid rgba(141, 253, 27, 0.7);
+    border-radius: 50%;
+    margin: 15% auto;
+    animation: newAnim 5s linear infinite;
+}
+.circles1 .three {
+    width: 70%;
+    height: 70%;
+    border: 1px solid #befa86;
+    border-radius: 50%;
+    margin: 15% auto;
+    animation: newAnim 3s normal infinite;
+}
+.circles1 .four {
+    width: 60%;
+    height: 60%;
+    border: 1px solid #8DFD1B;
+    box-shadow: 1px 3px rgba(32, 66, 1, 0.4);
+    border-radius: 50%;
+    margin: 20% auto;
+    animation: newAnim 3s linear infinite;
+}
+.circles1 .five {
+    width: 60%;
+    height: 60%;
+    border: 1px solid #8DFD1B;
+    box-shadow: 1px 3px rgba(32, 66, 1, 0.4);
+    border-radius: 50%;
+    margin: 20% auto;
+    animation: newAnim 3s linear infinite;
+}
+
+@keyframes newAnim {
+    0%{
+        scale: none;
+    }
+
+    50%{
+        scale: 1.2;
+    }
+
+    100%{
+        scale: none;
+    }
+}
+
+                 /*2*/
+
+.circles2 {
+    width: 600px;
+    height: 600px;
+    position: absolute;
+    left: 60%;
+    top: 30%;
+}
+
+.circles2 .one {
+    max-width: 100%;
+    height: 100%;
+    border: 1px solid rgba(141, 253, 27, 0.5);
+    border-radius: 50%;
+    animation: newAnim 10s alternate infinite;
+}
+.circles2 .two {
+    width: 70%;
+    height: 70%;
+    border: 1px solid rgba(141, 253, 27, 0.7);
+    border-radius: 50%;
+    margin: 15% auto;
+    animation: newAnim 5s linear infinite;
+}
+.circles2 .three {
+    width: 70%;
+    height: 70%;
+    border: 1px solid #befa86;
+    border-radius: 50%;
+    margin: 15% auto;
+    animation: newAnim 3s normal infinite;
+}
+.circles2 .four {
+    width: 60%;
+    height: 60%;
+    border: 1px solid #8DFD1B;
+    box-shadow: 1px 3px rgba(32, 66, 1, 0.4);
+    border-radius: 50%;
+    margin: 20% auto;
+    animation: newAnim 3s linear infinite;
+}
+.circles2 .five {
+    width: 60%;
+    height: 60%;
+    border: 1px solid #8DFD1B;
+    box-shadow: 1px 3px rgba(32, 66, 1, 0.4);
+    border-radius: 50%;
+    margin: 20% auto;
+    animation: newAnim 3s linear infinite;
+}
+
+@keyframes newAnim {
+    0%{
+        scale: none;
+    }
+
+    50%{
+        scale: 1.2;
+    }
+
+    100%{
+        scale: none;
+    }
+}
+
+                       /*3*/
+
+.circles3 {
+    width: 600px;
+    height: 600px;
+    position: absolute;
+    top: 60%;
+}
+
+.circles3 .one {
+    max-width: 100%;
+    height: 100%;
+    border: 1px solid rgba(141, 253, 27, 0.5);
+    border-radius: 50%;
+    animation: newAnim 10s alternate infinite;
+}
+.circles3 .two {
+    width: 70%;
+    height: 70%;
+    border: 1px solid rgba(141, 253, 27, 0.7);
+    border-radius: 50%;
+    margin: 15% auto;
+    animation: newAnim 5s linear infinite;
+}
+.circles3 .three {
+    width: 70%;
+    height: 70%;
+    border: 1px solid #befa86;
+    border-radius: 50%;
+    margin: 15% auto;
+    animation: newAnim 3s normal infinite;
+}
+.circles3 .four {
+    width: 60%;
+    height: 60%;
+    border: 1px solid #8DFD1B;
+    box-shadow: 1px 3px rgba(32, 66, 1, 0.4);
+    border-radius: 50%;
+    margin: 20% auto;
+    animation: newAnim 3s linear infinite;
+}
+.circles3 .five {
+    width: 60%;
+    height: 60%;
+    border: 1px solid #8DFD1B;
+    box-shadow: 1px 3px rgba(32, 66, 1, 0.4);
+    border-radius: 50%;
+    margin: 20% auto;
+    animation: newAnim 3s linear infinite;
+}
+
+@keyframes newAnim {
+    0%{
+        scale: none;
+    }
+
+    50%{
+        scale: 1.2;
+    }
+
+    100%{
+        scale: none;
+    }
 }
 
                   /*OUR-PARTNERS*/
@@ -488,6 +685,10 @@ header .social img:hover {
 
 .fag .left-wrapper h2 span {
     color: #A8A8A8;
+}
+
+.fag .left-wrapper img {
+    width: 100%;
 }
 
 .fag .right-wrapper {
@@ -580,9 +781,10 @@ header .social img:hover {
 }
 
 .team .participant .card-participant .container-icon {
-    display: flex;
-    justify-content: space-around;
-    width: 30%;
+    display: grid;
+    grid-template-columns: 49% 49%;
+    grid-column-gap: 2%;
+    width: 40%;
     margin: auto;
     padding: 3%;
 }
@@ -630,6 +832,12 @@ header .social img:hover {
     align-items: center;
     background: #8DFD1B;
     padding: 1% 7%;
+    transition: 1s;
+}
+
+.join .left-block .discord-btn:hover {
+    scale: 1.2;
+    background: repeating-radial-gradient( white, #bbfa7b,#8DFD1B);
 }
 
 .join .left-block .discord-btn p {
@@ -637,6 +845,10 @@ header .social img:hover {
     padding: 0 10px;
     font-family: DM_Mono_Regular;
     font-size: 16px;
+}
+
+.join .card-purple {
+    width: 100%;
 }
 
 
@@ -654,8 +866,8 @@ footer {
     grid-template-rows: auto auto auto;
 }
 
-footer img {
-
+footer .logo {
+    align-self: center;
 }
 
 footer p {
@@ -664,12 +876,14 @@ footer p {
 }
 
 footer .soc {
-    display: flex;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-column-gap: 2%;
+    align-items: center;
 }
 
 footer .soc img {
-    width: 100%;
-    padding: 0 2%;
+    max-width: 100%;
 }
 
 footer .s {
@@ -697,6 +911,83 @@ footer .c {
 footer .ch {
     /*grid-row: 3/4;*/
     grid-column: 3/4;
+}
+
+@media (max-width: 1200px) {
+    footer {
+        grid-template-columns: auto auto auto auto;
+    }
+}
+
+@media (max-width: 1000px) {
+    header {
+        grid-template-columns: auto;
+        justify-content: center;
+        grid-template-rows: auto auto auto ;
+        grid-row-gap: 3%;
+        align-items: center;
+
+    }
+    header .logo-container {
+        justify-self: center;
+    }
+    header .nav {
+        justify-self: center;
+    }
+    header .social {
+        justify-self: center;
+    }
+    .collection777 {
+        margin: 10% 0 1% 0;
+    }
+    .collection777 .right-container p {
+        width: 95%;
+    }
+    .artists .art {
+        width: 80%;
+        height: 140vh;
+        grid-template-columns: 50% 50%;
+        grid-column-gap: 5%;
+        grid-template-rows: 30% 30% 30%;
+        grid-row-gap: 5%;
+    }
+    .story .container {
+        grid-template-columns: 20% 75%;
+    }
+    .roadmap {
+        grid-template-columns: 50%;
+    }
+    .fag {
+        grid-template-columns: 40% auto;
+        grid-column-gap: 5%;
+    }
+    .join {
+        align-items: center;
+    }
+    .container-footer {
+        padding: 3% 5%;
+    }
+    footer p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 800px) {
+    .team .participant {
+        grid-template-columns: 60%;
+        justify-content: center;
+        grid-template-rows: auto auto auto;
+        grid-row-gap: 2%;
+    }
+    .team .participant .card-participant .container-icon {
+        display: grid;
+        grid-template-columns: 49% 49%;
+        text-align: center;
+        grid-column-gap: 2%;
+        width: 30%;
+        margin: auto;
+        padding: 3%;
+    }
 }
 
 
