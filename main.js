@@ -10,6 +10,8 @@ artists.addEventListener("mouseover", (e) => {
         for (let l of links) {
             if (l.getAttribute("data-number") === id) {
                 l.style.display = "block";
+                l.classList.add("animate__animated");
+                l.classList.add("animate__fadeInUp");
                 console.log(l.getAttribute("data-number"));
             }
         }
